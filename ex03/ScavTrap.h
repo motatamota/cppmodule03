@@ -14,7 +14,7 @@
 # define SCAVTRAP_H
 # include "ClapTrap.h"
 
-class	ScavTrap : ClapTrap
+class	ScavTrap : virtual public ClapTrap
 {
 public:
 	ScavTrap();

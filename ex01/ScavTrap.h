@@ -17,7 +17,6 @@
 class	ScavTrap : ClapTrap
 {
 private:
-	int	guard_flag;
 public:
 	ScavTrap();
 	ScavTrap(std::string p_name);

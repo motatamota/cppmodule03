@@ -14,7 +14,7 @@
 # define FragTrap_H
 # include "ClapTrap.h"
 
-class	FragTrap : ClapTrap
+class	FragTrap : virtual public ClapTrap
 {
 public:
 	FragTrap();
