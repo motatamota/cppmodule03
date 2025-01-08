@@ -2,7 +2,7 @@ NAME = ex00
 FLAG = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp ClapTrap.cpp
 OBJ = $(SRC:.cpp=.o)
-CC = g++
+CC = c++
 
 all: $(NAME)
 
