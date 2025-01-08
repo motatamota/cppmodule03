@@ -36,7 +36,10 @@ FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
 FragTrap&	FragTrap::operator=(const FragTrap& other)
 {
 	if (this == &other)
+	{
+		std::cout << "FragTrap: " << name << ": copy assignment called." << std::endl;
 		return (*this);
+	}
 	ClapTrap::operator=(other);
 	hit_point = other.hit_point;
 	energy_point = other.energy_point;

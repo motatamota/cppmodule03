@@ -38,15 +38,17 @@ DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other.ClapTrap::na
 
 DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& other)
 {
-	if (this != &other)
+	if (this == &other)
 	{
-		ScavTrap::operator=(other);
-		FragTrap::operator=(other);
-		name = other.name;
-		hit_point = other.hit_point;
-		energy_point = other.energy_point;
-		attack_damage = other.attack_damage;
+		std::cout << "DiamondTrap: " << name << ": copy assignment called." << std::endl;
+		return (*this);
 	}
+	ScavTrap::operator=(other);
+	FragTrap::operator=(other);
+	name = other.name;
+	hit_point = other.hit_point;
+	energy_point = other.energy_point;
+	attack_damage = other.attack_damage;
 	std::cout << "DiamondTrap: " << name << ": copy assignment called." << std::endl;
 	return (*this);
 }
