@@ -35,6 +35,8 @@ FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
 
 FragTrap&	FragTrap::operator=(const FragTrap& other)
 {
+	if (this == &other)
+		return (*this);
 	ClapTrap::operator=(other);
 	hit_point = other.hit_point;
 	energy_point = other.energy_point;

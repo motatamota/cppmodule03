@@ -30,6 +30,8 @@ ClapTrap::ClapTrap(const ClapTrap& other) : name(other.name), hit_point(other.hi
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& other)
 {
+	if (this == &other)
+		return (*this);
 	name = other.name;
 	hit_point = other.hit_point;
 	energy_point = other.energy_point;

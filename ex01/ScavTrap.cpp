@@ -35,6 +35,8 @@ ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
 
 ScavTrap&	ScavTrap::operator=(const ScavTrap& other)
 {
+	if (this == &other)
+		return (*this);
 	ClapTrap::operator=(other);
 	hit_point = other.hit_point;
 	energy_point = other.energy_point;
